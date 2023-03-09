@@ -5,7 +5,7 @@ from translatepy import Translator
 
 def process_sentence(user_input):
     translator = Translator()
-    model = tf.keras.models.load_model("token_char_model_2")
+    model = tf.keras.models.load_model("token_char_model")
     emotions = ['Anger :angry:', 'Fear :fearful:', 'Joy :smile:', 'Love :two_hearts:','Surprise :astonished:']
     result = translator.translate(user_input, "English")
     user_input = result.result
